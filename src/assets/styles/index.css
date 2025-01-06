@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7244c8;
+  --primary-gray: #f2f4f7;
+  --primary-green: #12b76a;
+  --primray-black: #344054;
+  --secondary-black: #101828;
+}
+body {
+  overflow-x: hidden;
+}
+.ant-steps
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  width: 100%;
+  z-index: 1;
+  background-color: var(--primary);
+}
+
+.ant-steps .ant-steps-item-tail::after {
+  height: 2px;
+}
+
+.ant-steps.ant-steps-label-vertical .ant-steps-item-tail {
+  padding: 0px 16px 0px 1px !important;
+}
+
+/* -------------------- description -------------------- */
+.ant-steps .ant-steps-item-description,
+.ant-steps
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-description,
+.ant-steps
+  .ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #475467;
+}
+
+/* -----------------------title ---------------- */
+.ant-steps.ant-steps-label-vertical .ant-steps-item-content {
+  margin-top: 2px;
+  font-weight: 600;
+  font-size: 14px;
+  text-wrap: nowrap;
+}
+/*-------------------- passed title ------------------------*/
+.ant-steps
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  color: var(--primary-green);
+}
+/*---------------------- active title -------------------*/
+
+.ant-steps
+  .ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  color: var(--primary);
+}
+
+/*---------------------- waiting title ----------------------*/
+.ant-steps
+  .ant-steps-item-wait
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  color: var(--primray-black);
+}
+
+/*----------------------- icons -------------------------*/
+.anticon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.ant-steps .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon,
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+  display: none;
+}
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon,
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon,
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  position: relative;
+  margin-top: 5px;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  margin-top: 5px;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.ant-steps .ant-steps-item-process .ant-steps-item-icon::after,
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* -------------------- input---------------- */
+.ant-form-item .ant-form-item-control-input {
+  box-shadow: 0px 1px 2px 0px #1018280d !important;
+}
+.ant-form-item {
+  margin-bottom: 15px !important;
+}
+.ant-input-outlined {
+  padding: 10px 15px;
+  border-color: #d0d5dd;
+  background-color: rgb(249, 250, 251);
+}
+.ant-form-item .ant-form-item-label > label {
+  font-weight: 500;
+  color: var(--primray-black);
+}
+
+.ant-input::placeholder {
+  color: #667085;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* --------------------- button --------------------- */
+.ant-btn-variant-solid {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  height: auto;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px !important;
+  border-radius: 8px;
+}
+.ant-btn-variant-solid:hover {
+  background-color: #6039a9 !important;
+}
+
+/* --------------------- otp --------------------- */
+.otpWrapper .ant-input-outlined {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 48px;
+}
+
+/* -------------------- phone number input---------------------- */
+.phoneNumberWrapper .ant-input-outlined:dir(ltr) {
+  border-left: transparent;
+}
+
+.phoneNumberWrapper .ant-input-outlined:dir(rtl) {
+  border-right: transparent;
+}
+/*----------------- vertical steps ---------------*/
+.ant-steps.ant-steps-vertical
+  > .ant-steps-item
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  width: 3px;
+  height: 100%;
+}
+.ant-steps.ant-steps-vertical
+  > .ant-steps-item
+  > .ant-steps-item-container
+  > .ant-steps-item-tail {
+  inset-inline-start: 11px;
+  padding: 32px 0px 0px;
+}
+
+
+.ant-form-item .ant-form-item-explain-error 
+{
+  color: #475467;
+  font-size: 14px;
+  font-weight: 400;
+}
